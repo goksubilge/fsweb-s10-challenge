@@ -1,6 +1,8 @@
+import { getDefaultOptions } from "date-fns";
+
 const s10chLocalStorageKey = "s10ch";
 
-const baslangicDegerleri = {
+export const baslangicDegerleri = {
   notlar: [
     {
       id: "75g1IyB8JLehAr0Lr5v3p",
@@ -24,6 +26,17 @@ function baslangicNotlariniGetir(key) {
   if (eskiNotlar) {
     return localStorageStateOku(key);
   } else {
-    return baslangicDegerleri
+    return baslangicDegerleri;
   }
 }
+
+function reducer(state, action) {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+// normalde reducer(state=baslangicDegerleri) imi burda initialvalues a eşitliyorum,
+// ama (datamın reducerda olmadığı bir durumdaymışım gibi) örnek olarak exportla indexten çekeceğim bu projede.
+export default reducer;
